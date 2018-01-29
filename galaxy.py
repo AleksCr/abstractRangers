@@ -1,6 +1,7 @@
 import random
 import json
 from race import Race
+import turn
 
 
 class Galaxy:
@@ -45,13 +46,14 @@ class Galaxy:
                     htmlfile.write("</ul>")
         elif(type == "graph"):
             with open("map.html", "a") as htmlfile:
+                htmlfile.write("<body bgcolor = \"black\">")
+                htmlfile.write("<p><span style=\"position: absolute; color: white\">Galaxy time: "+turn.gala_time.get_str_time()+"</span></p>")
                 for system in self.systems:
                     color = "white"
                     if system.planets:
                         for planet in system.planets:
                             if(planet.owner != None):
                                 color = planet.owner().color
-                    htmlfile.write("<body bgcolor = \"black\">")
                     htmlfile.write("<img src=\"images/star.png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
                     htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
 
