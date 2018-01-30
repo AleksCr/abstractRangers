@@ -65,6 +65,7 @@ class StarSys:
         self.x=random.randint(100, 800)
         self.y=random.randint(0, 800)
         self.planets = []
+        self.ships = []
 
     def init_gen(self):
         names_one = ["Ar", "Ma", "Da", "Kun", "Tor", "Vol", "She", "Tu", "He", "Vit"]

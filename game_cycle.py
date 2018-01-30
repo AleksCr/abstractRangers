@@ -1,6 +1,7 @@
 from galaxy import Galaxy
 from race import Race
 import turn
+import ship
 
 
 gal = Galaxy()
@@ -12,8 +13,10 @@ while game_exit != 1 :
     action = input("input command: ")
     if action == "makeciv":
         Race.create_civ(Race, gal)
-    if action == "turn" or action == "t":
+    elif action == "turn" or action == "t":
         turn.gala_time.time_turn()
+    elif action == "cheatship":
+        ship.Ship()
     gal.galaxy2html("graph")
 
 # Race.create_civ(Race, gal)
