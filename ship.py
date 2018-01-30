@@ -8,7 +8,9 @@ class Ship:
         global_ship_id += 1
         self.ai = 1
         self.system = system
-        system.ships += self
+        system.ships.append(self)
+        print("ship was created")
+        print(self.return_location().name)
 
     def new_location(self, loc_system):
         system = loc_system

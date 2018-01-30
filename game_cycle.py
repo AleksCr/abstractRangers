@@ -16,7 +16,13 @@ while game_exit != 1 :
     elif action == "turn" or action == "t":
         turn.gala_time.time_turn()
     elif action == "cheatship":
-        ship.Ship()
+        for system in gal.systems:
+            if system.planets:
+                for planet in system.planets:
+                    if (planet.owner != None):
+                        sys = system
+                        break
+        ship.Ship(sys)
     gal.galaxy2html("graph")
 
 # Race.create_civ(Race, gal)
