@@ -23,6 +23,14 @@ while game_exit != 1 :
                         sys = system
                         break
         ship.Ship(sys)
+    elif action == "ship_info":
+        info = input("id")
+        print(info)
+    elif action == "multiturn":
+        turns = input("input num of turns")
+        for i in range(int(turns)):
+            turn.gala_time.time_turn()
+        print(str(i)+" turns passed")
     gal.galaxy2html("graph")
 
 # Race.create_civ(Race, gal)
