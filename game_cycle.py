@@ -43,7 +43,7 @@ while game_exit != 1 :
         for system in gal.systems:
             if system.name == new_sys:
                 manage_ship.new_location(system)
-                print("Hyper jump! New ship loc is " + system.name + " system!")
+                print("Hyper jump! New ship loc is " + manage_ship.system.name + " system!")
     elif action == "test":
         inp = input("num: ")
         if int(inp) == 1:

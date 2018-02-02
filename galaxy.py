@@ -56,6 +56,8 @@ class Galaxy:
                                 color = planet.owner().color
                     htmlfile.write("<img src=\"images/star.png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
                     htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
+                    if system.ships:
+                        htmlfile.write("<img src=\"images/gala_ship.png\" style=\"position: absolute; top: " + str(system.x-10) + "px; left: " + str(system.y+10) + "px\">")
 
 
 class StarSys:

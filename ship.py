@@ -13,7 +13,7 @@ class Ship:
         print(self.return_location().name)
 
     def new_location(self, loc_system):
-        system = loc_system
+        self.system = loc_system
 
     def return_location(self):
         return self.system
