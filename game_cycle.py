@@ -44,6 +44,7 @@ while game_exit != 1 :
             if system.name == new_sys:
                 manage_ship.new_location(system)
                 print("Hyper jump! New ship loc is " + system.name + " system!")
+                break
     elif action == "shipcount":
         i = 0
         for system in gal.systems:
