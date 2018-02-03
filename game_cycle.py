@@ -34,16 +34,22 @@ while game_exit != 1 :
     elif action == "manage ship":
         sh = input("input ship id: ")
         for system in gal.systems:
-            for seach_ship in system.ships:
-                if seach_ship.id == int(sh):
-                    print("success! ship id is " + str(seach_ship.id) + ". Ship located in " + system.name + " system")
+            for search_ship in system.ships:
+                if search_ship.id == int(sh):
+                    print("success! ship id is " + str(search_ship.id) + ". Ship located in " + system.name + " system")
                     new_sys = input("Enter new location system name: ")
                     break
-        manage_ship = seach_ship
+        manage_ship = search_ship
         for system in gal.systems:
             if system.name == new_sys:
                 manage_ship.new_location(system)
-                print("Hyper jump! New ship loc is " + manage_ship.system.name + " system!")
+                print("Hyper jump! New ship loc is " + system.name + " system!")
+    elif action == "shipcount":
+        i = 0
+        for system in gal.systems:
+            for search_ship in system.ships:
+                i=i+1
+        print(i)
     elif action == "test":
         inp = input("num: ")
         if int(inp) == 1:

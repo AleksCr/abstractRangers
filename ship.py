@@ -13,7 +13,10 @@ class Ship:
         print(self.return_location().name)
 
     def new_location(self, loc_system):
+        if self in self.system.ships:
+            self.system.ships.remove(self)
         self.system = loc_system
+        loc_system.ships.append(self)
 
     def return_location(self):
         return self.system
