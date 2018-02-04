@@ -2,6 +2,8 @@ from galaxy import Galaxy
 from race import Race
 import turn
 import ship
+import ai_race
+import ai_ship
 
 
 gal = Galaxy()
@@ -22,7 +24,8 @@ while game_exit != 1 :
                     if (planet.owner != None):
                         sys = system
                         break
-        ship.Ship(sys)
+        new_ship = ship.Ship(sys)
+        new_ship.ai = 0
     elif action == "ship_info":
         info = input("id")
         print(info)
