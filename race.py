@@ -8,6 +8,9 @@ class Race:
         self.money = random.randint(100, 800)
         self.color = "green"
 
+    def make_money(self):
+        self.money += random.randint(1,100)
+
     def create_civ(self, gal):
         gal_planets = []
         for system in gal.systems:
