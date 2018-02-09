@@ -40,7 +40,6 @@ class Galaxy:
             with open("map.html","a") as htmlfile:
                 for system in self.systems:
                     htmlfile.write(system.name+"<ul>")
-                    # print(len(system.planets))
                     for planet in system.planets:
                         htmlfile.write("<li>" + planet.name + " - " + planet.type + "</li>")
                     htmlfile.write("</ul>")
@@ -91,9 +90,3 @@ class Planet:
         self.name = random.choice(names_one) + random.choice(names_other)
 
 
-# gal = Galaxy()
-# gal.init_gen()
-# gal.dump_world()
-# gal.show_galaxy()
-# gal.galaxy2html("text")
-# gal.galaxy2html("graph")
