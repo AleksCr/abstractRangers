@@ -5,12 +5,17 @@ import ai_race
 
 global_race_id = 1
 
+race_colors = ["red","yellow","green","pink","blue"]
 
 class Race:
     def __init__(self, gal):
-        global global_race_id
+        global global_race_id, race_colors
+        if not race_colors:
+            del self
+            return
         self.money = random.randint(100, 800)
-        self.color = "green"
+        self.color = random.choice(race_colors)
+        race_colors.remove(self.color)
         self.id = global_race_id
 
         global_race_id += 1
