@@ -12,9 +12,10 @@ gal.init_gen()
 game_exit = 0
 
 while game_exit != 1 :
+    gal.galaxy2html("graph")
     action = input("input command: ")
     if action == "makeciv":
-        Race.create_civ(Race, gal)
+        Race(gal)
     elif action == "turn" or action == "t":
         turn.gala_time.time_turn()
     elif action == "cheatship":
@@ -61,7 +62,6 @@ while game_exit != 1 :
         inp = input("num: ")
         if int(inp) == 1:
             print("kruto!")
-    gal.galaxy2html("graph")
 
 # Race.create_civ(Race, gal)
 # gal.galaxy2html("graph")

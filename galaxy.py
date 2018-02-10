@@ -10,7 +10,7 @@ class Galaxy:
         self.id = 200
 
     def init_gen(self):
-        for i in range(60):
+        for i in range(10):
             ss = StarSys()
             ss.init_gen()
             self.systems.append(ss)
@@ -52,7 +52,7 @@ class Galaxy:
                     if system.planets:
                         for planet in system.planets:
                             if(planet.owner != None):
-                                color = planet.owner().color
+                                color = planet.owner.color
                     htmlfile.write("<img src=\"images/star_" + system.type + ".png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
                     htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
                     if system.ships:
