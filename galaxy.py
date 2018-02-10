@@ -53,7 +53,7 @@ class Galaxy:
                         for planet in system.planets:
                             if(planet.owner != None):
                                 color = planet.owner().color
-                    htmlfile.write("<img src=\"images/star_orange.png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
+                    htmlfile.write("<img src=\"images/star_" + system.type + ".png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
                     htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
                     if system.ships:
                         htmlfile.write("<img src=\"images/gala_ship.png\" style=\"position: absolute; top: " + str(system.x-10) + "px; left: " + str(system.y+10) + "px\">")
@@ -67,6 +67,7 @@ class StarSys:
         self.y=random.randint(0, 800)
         self.planets = []
         self.ships = []
+        self.type = random.choice(["red","orange","blue","yellow"])
 
     def init_gen(self):
         names_one = ["Ar", "Ma", "Da", "Kun", "Tor", "Vol", "She", "Tu", "He", "Vit"]
