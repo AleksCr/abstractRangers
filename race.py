@@ -27,9 +27,7 @@ class Race:
         rand_planet = random.choice(gal_planets)
         # for system in gal.systems:
         #     print(system.name)
-        print("test")
         rand_planet.owner = self
-        print(str(rand_planet) + "" + str(rand_planet.owner))
 
     def make_money(self):
         self.money += random.randint(1,100)
