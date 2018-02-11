@@ -14,16 +14,20 @@ class Race:
             del self
             return
         self.money = random.randint(100, 800)
-        self.color = random.choice(race_colors)
-        race_colors.remove(self.color)
         self.id = global_race_id
 
         global_race_id += 1
         gal_planets = []
-        for system in gal.systems:
-            if system.planets:
-                for planet in system.planets:
-                    gal_planets.append(planet)
+        system = random.choice(gal.systems)
+        if system.planets:
+            planet = random.choice(system.planets)
+            if(planet.owner != None):
+                print("There is owner already! Delete Race..")
+                del self
+                return
+            gal_planets.append(planet)
+        self.color = random.choice(race_colors)
+        race_colors.remove(self.color)
         rand_planet = random.choice(gal_planets)
         # for system in gal.systems:
         #     print(system.name)

@@ -10,7 +10,7 @@ class Galaxy:
         self.id = 200
 
     def init_gen(self):
-        for i in range(10):
+        for i in range(1):
             ss = StarSys()
             ss.init_gen()
             self.systems.append(ss)
@@ -47,14 +47,22 @@ class Galaxy:
             with open("map.html", "a") as htmlfile:
                 htmlfile.write("<body bgcolor = \"black\">")
                 htmlfile.write("<p><span style=\"position: absolute; color: white\">Galaxy time: "+turn.gala_time.get_str_time()+"</span></p>")
+                count_races = 0
                 for system in self.systems:
                     color = "white"
                     if system.planets:
                         for planet in system.planets:
                             if(planet.owner != None):
+                                count_races += 1
                                 color = planet.owner.color
+                                print(str(count_races))
+                    #             ToDo: Замутить функцию красящую систему, населенную несколькими расами
                     htmlfile.write("<img src=\"images/star_" + system.type + ".png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
-                    htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
+                    if count_races <= 1:
+                        htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
+                    else:
+                        htmlfile.write("<span  style=\"position: absolute; color: " + " lime" + "; top: " + str(
+                            system.x + 20) + "px; left: " + str(system.y - 15) + "px\">" + system.name + "</span>")
                     if system.ships:
                         htmlfile.write("<img src=\"images/gala_ship.png\" style=\"position: absolute; top: " + str(system.x-10) + "px; left: " + str(system.y+10) + "px\">")
 
