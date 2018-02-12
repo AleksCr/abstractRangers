@@ -61,8 +61,9 @@ class Galaxy:
                     if count_races <= 1:
                         htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
                     else:
-                        htmlfile.write("<span  style=\"position: absolute; color: " + " lime" + "; top: " + str(
-                            system.x + 20) + "px; left: " + str(system.y - 15) + "px\">" + system.name + "</span>")
+                        multi_color_text_raw = system.name
+                        multi_color_text = multi_color_text_raw
+                        htmlfile.write("<span  style=\"position: absolute; color: " + " lime" + "; top: " + str(system.x + 20) + "px; left: " + str(system.y - 15) + "px\">" + multi_color_text + "</span>")
                     if system.ships:
                         htmlfile.write("<img src=\"images/gala_ship.png\" style=\"position: absolute; top: " + str(system.x-10) + "px; left: " + str(system.y+10) + "px\">")
 
