@@ -56,7 +56,6 @@ class Galaxy:
                                 count_races += 1
                                 color = planet.owner.color
                                 print(str(count_races))
-                    #             ToDo: Замутить функцию красящую систему, населенную несколькими расами
                     htmlfile.write("<img src=\"images/star_" + system.type + ".png\" style=\"position: absolute; top: "+str(system.x)+"px; left: "+str(system.y)+"px\">")
                     if count_races <= 1:
                         htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
@@ -73,7 +72,6 @@ class Galaxy:
                             else:
                                 color = "white"
                             multi_color_text += "<span style=\"color: "+color+"\">"+current_symb+"</span>"
-                        # multi_color_text = multi_color_text_raw
                         htmlfile.write(multi_color_text)
                         htmlfile.write("</span>")
                     if system.ships:
