@@ -22,7 +22,7 @@ class Galaxy:
                 print("     "+planet.name)
 
     def dump_world(self):
-        data={}
+        data = {}
         for system in self.systems:
             data[system.name] = {}
             for planet in system.planets:
@@ -36,14 +36,14 @@ class Galaxy:
     def galaxy2html(self, type):
         with open("map.html","w") as htmlfile:
             htmlfile.write("")
-        if(type == "text"):
+        if type == "text":
             with open("map.html","a") as htmlfile:
                 for system in self.systems:
                     htmlfile.write(system.name+"<ul>")
                     for planet in system.planets:
                         htmlfile.write("<li>" + planet.name + " - " + planet.type + "</li>")
                     htmlfile.write("</ul>")
-        elif(type == "graph"):
+        elif type == "graph":
             with open("map.html", "a") as htmlfile:
                 htmlfile.write("<body bgcolor = \"black\">")
                 htmlfile.write("<p><span style=\"position: absolute; color: white\">Galaxy time: "+turn.gala_time.get_str_time()+"</span></p>")
@@ -67,7 +67,7 @@ class Galaxy:
                             current_symb = ""
                             current_symb += multi_color_text_raw[i]
                             i += 1
-                            if (planet.owner != None):
+                            if planet.owner != None:
                                 color = planet.owner.color
                             else:
                                 color = "white"
