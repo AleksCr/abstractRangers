@@ -62,8 +62,20 @@ class Galaxy:
                         htmlfile.write("<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"+system.name+"</span>")
                     else:
                         multi_color_text_raw = system.name
-                        multi_color_text = multi_color_text_raw
-                        htmlfile.write("<span  style=\"position: absolute; color: " + " lime" + "; top: " + str(system.x + 20) + "px; left: " + str(system.y - 15) + "px\">" + multi_color_text + "</span>")
+                        multi_color_text = "<span  style=\"position: absolute; color: "+str(color)+"; top: "+str(system.x+20)+"px; left: "+str(system.y-15)+"px\">"
+                        i = 0
+                        for planet in system.planets:
+                            current_symb = ""
+                            current_symb += multi_color_text_raw[i]
+                            i += 1
+                            if (planet.owner != None):
+                                color = planet.owner.color
+                            else:
+                                color = "white"
+                            multi_color_text += "<span style=\"color: "+color+"\">"+current_symb+"</span>"
+                        # multi_color_text = multi_color_text_raw
+                        htmlfile.write(multi_color_text)
+                        htmlfile.write("</span>")
                     if system.ships:
                         htmlfile.write("<img src=\"images/gala_ship.png\" style=\"position: absolute; top: " + str(system.x-10) + "px; left: " + str(system.y+10) + "px\">")
 
