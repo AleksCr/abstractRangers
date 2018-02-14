@@ -2,6 +2,7 @@ import random
 import json
 from race import Race
 import turn
+import settings
 
 
 class Galaxy:
@@ -10,7 +11,7 @@ class Galaxy:
         self.id = 200
 
     def init_gen(self):
-        for i in range(1):
+        for i in range(settings.MAX_STARS):
             ss = StarSys()
             ss.init_gen()
             self.systems.append(ss)
