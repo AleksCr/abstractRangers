@@ -84,7 +84,7 @@ class StarSys:
         self.id = 1
         self.name = "star"
         self.x=random.randint(100, 800)
-        self.y=random.randint(0, 800)
+        self.y=random.randint(100, 800)
         self.planets = []
         self.ships = []
         self.type = random.choice(["red","orange","blue","yellow"])

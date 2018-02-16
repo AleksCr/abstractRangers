@@ -62,6 +62,3 @@ while game_exit != 1 :
         inp = input("num: ")
         if int(inp) == 1:
             print("kruto!")
-
-# Race.create_civ(Race, gal)
-# gal.galaxy2html("graph")
