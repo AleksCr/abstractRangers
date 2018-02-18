@@ -19,6 +19,7 @@ while game_exit != 1 :
     elif action == "turn" or action == "t":
         turn.gala_time.time_turn()
     elif action == "cheatship":
+        has_ai = input("0 if no ai, anything else if it is: ")
         sys = None
         for system in gal.systems:
             if system.planets:
@@ -29,7 +30,8 @@ while game_exit != 1 :
         if sys is None:
             continue
         new_ship = ship.Ship(sys)
-        new_ship.ai = 0
+        if has_ai:
+            new_ship.ai = 0
     elif action == "ship_info":
         info = input("id")
         print(info)

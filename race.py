@@ -1,7 +1,4 @@
 import random
-# from galaxy import Galaxy, StarSys
-import galaxy
-import ai_race
 
 global_race_id = 1
 
@@ -29,8 +26,6 @@ class Race:
         self.color = random.choice(race_colors)
         race_colors.remove(self.color)
         rand_planet = random.choice(gal_planets)
-        # for system in gal.systems:
-        #     print(system.name)
         rand_planet.owner = self
 
     def make_money(self):

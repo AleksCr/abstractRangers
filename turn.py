@@ -14,5 +14,4 @@ class Galaxy_time:
         return str(self.month)+"."+str(self.year)
 
 
-
 gala_time = Galaxy_time()
