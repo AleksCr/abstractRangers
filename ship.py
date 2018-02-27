@@ -1,9 +1,11 @@
 global_ship_id = 1
+import ai_ship
 
 
 class Ship:
     def __init__(self, system):
         global global_ship_id
+        self.ai_obj = ai_ship.AI_Ship(self)
         self.id = global_ship_id
         global_ship_id += 1
         self.ai = 1
@@ -23,4 +25,7 @@ class Ship:
 
     def turn_ai_off(self):
         self.ai = 0
+
+    def __del__(self):
+        del self.ai_obj
 
