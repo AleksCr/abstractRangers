@@ -3,4 +3,4 @@ class AI_Ship:
         ai_owner = ship
 
     def ai_cycle(self):
-        print("0")
+        print("ship ai cycle...")

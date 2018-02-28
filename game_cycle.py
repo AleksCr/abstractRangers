@@ -60,7 +60,9 @@ while game_exit != 1 :
             for search_ship in system.ships:
                 i=i+1
         print(i)
-    elif action == "test":
-        inp = input("num: ")
-        if int(inp) == 1:
-            print("kruto!")
+    elif action == "debug":
+        inp = input("input debug command: ")
+        if inp == "ship_ai":
+            print("ship")
+        elif inp == "race_ai":
+            print("race")
