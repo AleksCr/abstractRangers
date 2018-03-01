@@ -1,6 +1,5 @@
 import random
 import json
-from race import Race
 import turn
 import settings
 
