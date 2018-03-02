@@ -2,6 +2,7 @@ from galaxy import Galaxy
 from race import Race
 import turn
 import ship
+import fabrication
 import ai_race
 import ai_ship
 
@@ -66,3 +67,6 @@ while game_exit != 1 :
             print("ship")
         elif inp == "race_ai":
             print("race")
+        elif inp == "fab":
+            fabrication.Fabricate(ship.Frigate)
+

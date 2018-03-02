@@ -3,6 +3,8 @@ import ai_ship
 
 
 class Ship:
+    fab_points = 25
+
     def __init__(self, system):
         global global_ship_id
         self.ai_obj = ai_ship.AI_Ship(self)
@@ -29,3 +31,6 @@ class Ship:
     def __del__(self):
         del self.ai_obj
 
+
+class Frigate(Ship):
+    fab_points = 25

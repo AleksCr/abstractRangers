@@ -1,8 +1,6 @@
 class Fabricate:
-    def __init__(self, str):
-        if str == "ship":
-            Fabricate_inner()
+    def __init__(self, obj):
+        print(obj.fab_points)
 
-class Fabricate_inner:
-    def __init__(self):
-        print("zaglushka")
+
+
