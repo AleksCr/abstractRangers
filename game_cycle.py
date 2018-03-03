@@ -25,7 +25,7 @@ while game_exit != 1 :
         for system in gal.systems:
             if system.planets:
                 for planet in system.planets:
-                    if (planet.owner != None):
+                    if planet.owner != None:
                         sys = system
                         break
         if sys is None:
@@ -59,7 +59,7 @@ while game_exit != 1 :
         i = 0
         for system in gal.systems:
             for search_ship in system.ships:
-                i=i+1
+                i = i + 1
         print(i)
     elif action == "debug":
         inp = input("input debug command: ")

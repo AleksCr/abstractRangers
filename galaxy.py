@@ -52,7 +52,7 @@ class Galaxy:
                     color = "white"
                     if system.planets:
                         for planet in system.planets:
-                            if(planet.owner != None):
+                            if planet.owner != None:
                                 count_races += 1
                                 color = planet.owner.color
                                 print(str(count_races))

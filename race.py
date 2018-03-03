@@ -4,6 +4,7 @@ global_race_id = 1
 
 race_colors = ["red","yellow","green","pink","blue"]
 
+
 class Race:
     def __init__(self, gal):
         global global_race_id, race_colors

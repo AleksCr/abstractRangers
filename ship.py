@@ -1,5 +1,5 @@
-global_ship_id = 1
 import ai_ship
+global_ship_id = 1
 
 
 class Ship:

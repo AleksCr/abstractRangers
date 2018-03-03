@@ -5,7 +5,7 @@ class Galaxy_time:
 
     def time_turn(self):
         if self.month < 12:
-             self.month += 1
+            self.month += 1
         else:
             self.year += 1
             self.month = 1
