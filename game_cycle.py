@@ -68,5 +68,13 @@ while game_exit != 1 :
         elif inp == "race_ai":
             print("race")
         elif inp == "fab":
-            fabrication.Fabricate(ship.Frigate)
+            for system in gal.systems:
+                if system.planets:
+                    for planet in system.planets:
+                        if planet.owner != None:
+                            sys = system
+                            break
+            if sys is None:
+                continue
+            fabrication.Fabricate(sys, ship.Frigate)
 
