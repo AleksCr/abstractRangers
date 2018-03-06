@@ -1,8 +1,10 @@
 import random
+import ai_race
 
 global_race_id = 1
 
 race_colors = ["red","yellow","green","pink","blue"]
+race_container = []
 
 
 class Race:
@@ -28,6 +30,8 @@ class Race:
         race_colors.remove(self.color)
         rand_planet = random.choice(gal_planets)
         rand_planet.owner = self
+        race_container.append(self)
+        ai_obj = ai_race.AI_Race(self)
 
     def make_money(self):
         self.money += random.randint(1,100)

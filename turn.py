@@ -1,3 +1,6 @@
+import race
+
+
 class Galaxy_time:
     def __init__(self):
         self.month = 1
@@ -9,6 +12,8 @@ class Galaxy_time:
         else:
             self.year += 1
             self.month = 1
+        for current_race in race.race_container:
+            current_race.ai_obj.ai_cycle()
 
     def get_str_time(self):
         return str(self.month)+"."+str(self.year)
