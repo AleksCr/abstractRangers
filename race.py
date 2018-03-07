@@ -3,7 +3,7 @@ import ai_race
 
 global_race_id = 1
 
-race_colors = ["red","yellow","green","pink","blue"]
+race_colors = ["red", "yellow", "green", "pink", "blue"]
 race_container = []
 
 
