@@ -31,7 +31,7 @@ class Race:
         rand_planet = random.choice(gal_planets)
         rand_planet.owner = self
         race_container.append(self)
-        ai_obj = ai_race.AI_Race(self)
+        self.ai_obj = ai_race.AI_Race(self)
 
     def make_money(self):
         self.money += random.randint(1,100)

@@ -1,4 +1,4 @@
-# import game_cycle
+import galaxy
 import fabrication
 import ship
 
@@ -8,7 +8,7 @@ class AI_Race:
         ai_owner = race
 
     def ai_cycle(self):
-        for system in gal.systems:
+        for system in galaxy.gal.systems:
             if system.planets:
                 for planet in system.planets:
                     if planet.owner != None:

@@ -109,4 +109,5 @@ class Planet:
         names_other = ["kol", "nas", "vor", "taun", "tor", "rog", "en", "imic", "pain"]
         self.name = random.choice(names_one) + random.choice(names_other)
 
+gal = Galaxy()
 

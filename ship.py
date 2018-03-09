@@ -13,6 +13,7 @@ class Ship:
         self.ai = 1
         self.system = system
         system.ships.append(self)
+        self.ai_obj = ai_ship.AI_Ship(self)
         print("ship was created; id = " + str(self.id))
         print(self.return_location().name)
 
