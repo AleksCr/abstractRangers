@@ -29,7 +29,7 @@ while game_exit != 1 :
         if sys is None:
             continue
         new_ship = ship.Ship(sys)
-        if has_ai:
+        if not has_ai:
             new_ship.ai = 0
     elif action == "ship_info":
         info = input("id")

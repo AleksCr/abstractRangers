@@ -22,6 +22,7 @@ class Galaxy_time:
                 if search_ship.ai == 1:
                     print("ship has ai")
                     search_ship.ai_obj.ai_cycle()
+                    return
 
     def get_str_time(self):
         return str(self.month)+"."+str(self.year)

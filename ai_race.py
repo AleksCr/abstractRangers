@@ -8,10 +8,10 @@ class AI_Race:
         ai_owner = race
 
     def ai_cycle(self):
-        for system in galaxy.gal.systems:
+        '''for system in galaxy.gal.systems:
             if system.planets:
                 for planet in system.planets:
                     if planet.owner != None:
                         sys = system
                         break
-        fabrication.Fabricate(sys, ship.Frigate)
+        fabrication.Fabricate(sys, ship.Frigate)'''

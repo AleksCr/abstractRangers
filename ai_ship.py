@@ -11,4 +11,4 @@ class AI_Ship:
         #print(random.__file__)
         sys = random.choice(galaxy.gal.systems)
         print("ai jump point == "+sys.name)
-        self.ai_owner.new_location(sys)
+        self.ai_owner.new_location(sys) # ToDO: ограничить кораблю количество прыжков за ход
